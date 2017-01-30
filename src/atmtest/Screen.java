@@ -4,20 +4,21 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class Screen extends JPanel {
-	
-        JTextField textScreen = new JTextField();
-        
-	public Screen(){
-            this.add(textScreen);
-        }
-	// TODO: get current value and update or delete depending on value passed in.
-        public void keyPress(String value){
-            textScreen.setText(value);
-        }
-        public void displayMessageLine(String value){
-            
-        }
-        public void displayMessage(String value){
-            
-        }
+
+    JTextField textScreen = new JTextField();
+
+    public Screen() {
+        this.add(textScreen);
+
+    }
+    
+
+    public void displayMessageLine(String value) {
+        textScreen.setText( value + "\n");
+    }
+
+    public void displayMessage(String value) {
+        textScreen.setText( value );
+
+    }
 }//end class Screen

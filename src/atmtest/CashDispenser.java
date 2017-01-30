@@ -7,16 +7,20 @@ package atmtest;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-public class CashDispenser extends JButton implements ActionListener {
+import javax.swing.JPanel;
+
+public class CashDispenser extends JPanel implements ActionListener {
 
 	private final static int INITIAL_COUNT = 500;
 	private int count;
 	private boolean cashInSlot = false;
         
-	public CashDispenser(){
-                super ("Cash Slot");
-		count = INITIAL_COUNT;
-                addActionListener(this);
+        JButton cashDispenser = new JButton("Cash Slot");
+        
+	public CashDispenser(Screen screen){
+            this.add(cashDispenser);
+            count = INITIAL_COUNT;
+            
 	}//end CashDispenser constructor 
 	
 	public void dispenseCash(int amount){
@@ -46,7 +50,7 @@ public class CashDispenser extends JButton implements ActionListener {
                     }
             }
 
-        setText("Cash Slot");
+        
         paint(this.getGraphics());
         setVisible(false);
         setVisible(true);

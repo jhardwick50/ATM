@@ -7,9 +7,10 @@ package atmtest;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JPanel;
 
-public class DepositSlot extends JButton {
-
+public class DepositSlot extends JPanel {
+        
 	public boolean isEnvelopeReceived() {
 		return true;
 	}

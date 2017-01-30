@@ -12,16 +12,17 @@ import java.awt.event.ActionListener;
  *
  * @author Jason
  */
-public class KeyActionListener implements ActionListener {
-    private Screen screen;
-    
-    public KeyActionListener(Screen screen){
-        this.screen = screen;
-    }
 
+public class EnterActionListener implements ActionListener {
+   private ATM atm;
+    
+    public EnterActionListener(ATM atm){
+        this.atm = atm;
+    }
+    
     @Override
     public void actionPerformed(ActionEvent e) {
-        screen.keyPress(e.getActionCommand());
+        atm.pressEnter();
     }
     
 }
